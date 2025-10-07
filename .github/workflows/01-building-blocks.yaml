@@ -1,6 +1,9 @@
+# See 01-building-blocks/README.md for more information
+# about the building blocks of GitHub Actions
+
 name: 01 - Building Blocks
 
-on: push
+on: workflow_dispatch
 
 jobs:
   echo-hello:
@@ -8,9 +11,7 @@ jobs:
     steps:
       - name: Say hello
         run: echo "Hello, world!"
-
   echo-goodbye:
-    needs: echo-hello
     runs-on: ubuntu-latest
     steps:
       - name: Successful step
