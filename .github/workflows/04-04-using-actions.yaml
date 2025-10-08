@@ -15,6 +15,8 @@ jobs:
       - name: Install Dependencies
         working-directory: ./04-using-actions/react-app
         run: npm ci
+      - name: Run Unit Tests
+        run: npm run test
 
     # 0. Checkout the code from the repository
     # 1. Install deps of our react application
