@@ -1,0 +1,22 @@
+name: 01 - Building Blocks
+
+on: workflow_dispatch
+
+jobs:
+  echo-sharath: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Sharath
+        run: echo "Sharath"
+
+  echo-Arpitha:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Arpitha
+        run: |
+          echo "arpitha"
+          exit 1 
+
+      - name: Echo Test
+        # if: ${{ failure() }}
+        run: echo "skip this step runs only if the previous step fails."
