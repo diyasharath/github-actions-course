@@ -11,10 +11,10 @@ jobs:
   secondjob:
     runs-on: ubuntu-latest
     steps:
-      - name: Failed step
+      - name: Success step
         run: |
           echo "Just in this step"
-          exit 1
+          exit 0
 
       - name: Good Bye
         run: echo "Good Bye!!!"
