@@ -1,0 +1,29 @@
+name: 03 Runners
+
+on:
+  push
+
+jobs:
+  runner-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: This is to choose debian Runners
+        run: |
+           echo "So, my runner is: $RUNNER_OS"
+
+  runner-2:
+    runs-on: windows-latest
+    steps:
+      - name: This is to choose windows Runners
+        shell: bash 
+        run: |
+              echo "So, my runner is: $RUNNER_OS"
+
+
+  runner-3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: This is to choose debian Runners
+        run: |
+            echo "So, my runner is: $RUNNER_OS"
+
