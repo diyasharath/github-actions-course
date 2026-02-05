@@ -1,21 +1,22 @@
 name: 01 Building Blocks
 
-on: workflow_dispatch
+on : push
+
 
 jobs:
-  first-job:
+  echo-hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Say Hello
-        run: echo "Hello this is my first job"
-  secondjob:
-    needs: first-job
+      - name: Say hello
+        run: echo "Hello Sharu"
+  echo-goodbye:
     runs-on: ubuntu-latest
     steps:
-      - name: Success step
+      - name: Say Goo bye
         run: |
-          echo "Just in this step"
-          exit 0
+          echo "i will fail"
+          exit 1
+      - name: verify this step
+        run: |
+          echo "hello gh-actions"
 
-      - name: Good Bye
-        run: echo "Good Bye!!!"
