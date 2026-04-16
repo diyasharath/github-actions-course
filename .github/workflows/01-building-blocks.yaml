@@ -1,22 +1,22 @@
-name: 01 - Building Blocks
+name: 01 Building Blocks
 
-on: workflow_dispatch
+on : push
+
 
 jobs:
-  echo-sharath: 
+  echo-hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo Sharath
-        run: echo "Sharath"
-
-  echo-Arpitha:
+      - name: Say hello
+        run: echo "Hello Sharu"
+  echo-goodbye:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo Arpitha
+      - name: Say Goo bye
         run: |
-          echo "arpitha"
-          exit 1 
+          echo "i will fail"
+          exit 1
+      - name: verify this step
+        run: |
+          echo "hello gh-actions"
 
-      - name: Echo Test
-        # if: ${{ failure() }}
-        run: echo "skip this step runs only if the previous step fails."
